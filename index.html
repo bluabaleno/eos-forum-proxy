@@ -20,31 +20,29 @@
             const INDEX_PATH = MAIN_PAGE + '/index.html';
             const REPLACER = '=' + MAIN_PAGE + '/static/';
 
+            //
+            // --- CHANGE this for your specific site settings
+            //
             const PRESETS = {
-                default_sub: "novusphere",
+                default_sub: "all",
                 header_texts: [
-                    "Welcome to [forum.novusphere.io](https://forum.novusphere.io) a community moderated forum on the blockchain!",
-                    "Did you know you set other delegated moderators in your **settings**, or even opt-out of our moderation?"
+
                 ],
-                brand: {
-                    "title": "A decentralized forum",
-                    "logo": "https://cdn.novusphere.io/static/eos.svg",
-                    "icon": "https://i.imgur.com/xoB9i1O.png",
-                    "token_contract": "eosio.token",
-                    "token_symbol": "EOS"
-                },
                 storage: {
-                    eos_referendum: false,
-                    subscribed_subs: ["all", "novusphere", "anon", "anon-pol-econ"],
+                    eos_referendum: true,
+                    subscribed_subs: ["all", "novusphere", "eos", "anon-r-eos", "anon-pol-econ"],
                     moderation: {
-                        hide_spam_threads: false,
+                        hide_spam_threads: true,
                         mods: ["Novusphere/eos-forum-mod"]
                     },
                     settings: {
-                        theme: "https://eos-forum.org/static/css/theme/night.css"
+                        theme: "https://eos-forum.org/static/css/theme/day.css"
                     }
                 }
             };
+            //
+            // ---
+            //
 
             window.localStorage.setItem('presets', JSON.stringify(PRESETS));
 
